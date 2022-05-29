@@ -58,7 +58,9 @@ console.log("result = ", result);*/
 
 //-------------------------------------------
 
-var random = Math.ceil(Math.random() * 100);
+function getRandomInRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 var mas = [];
 
@@ -66,10 +68,11 @@ function createMatrix(row, col) {
   for (let i = 0; i < col; i++) {
     mas[i] = [];
     for (let j = 0; j < row; j++) {
-      mas[i][j] = random;
+      mas[i][j] = getRandomInRange(0, 100);
+
     }
   }
 }
-createMatrix(4, 5)
+createMatrix(4, 5);
 console.log(mas)
 
